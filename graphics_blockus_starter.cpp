@@ -74,6 +74,32 @@ void create_O(float x, float y){
     glFlush();
 }
 
+void drawBoard()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glColor3f(2.0, 1.0, 1.0);
+    int xsize=0,ysize=250;
+    for(int j=0;j<20;j++)
+    {
+        xsize=250;
+        for(int i=0;i<20;i++)
+        {
+            glBegin(GL_POLYGON);
+            glVertex3f(-50.0+xsize, -50.0+ysize, 0.0);
+            glVertex3f(-40.0+xsize, -50.0+ysize, 0.0);
+            glVertex3f(-40.0+xsize, -40.0+ysize, 0.0);
+            glVertex3f(-50.0+xsize, -40.0+ysize, 0.0);
+            glEnd();
+            xsize+=10.0;
+        }
+        ysize+=10.0;
+    }
+    glFlush();
+}
+
+
+
 /* Handler for window-repaint event. Call back when the window first appears and
  whenever the window needs to be re-painted. */
 void display() {
