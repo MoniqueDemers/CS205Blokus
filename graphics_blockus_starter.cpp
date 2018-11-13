@@ -1,4 +1,5 @@
 #include "graphics.h"
+#include "Piece.h"
 #include <string>
 
 GLdouble width, height;
@@ -16,63 +17,6 @@ void initGL() {
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f); // Black and opaque
 }
 
-void create_O(float x, float y){
-
-    //SHAPE
-    glBegin(GL_QUADS);
-    glColor3f(1.0,0.0,0.0);
-
-    glVertex2f(-tileSize + x, y);
-    glVertex2f(x, y);
-    glVertex2f(x, tileSize + y);
-    glVertex2f(-tileSize + x, tileSize + y);
-
-    glVertex2f(x, y);
-    glVertex2f(tileSize + x, y);
-    glVertex2f(tileSize + x, tileSize + y);
-    glVertex2f(x, tileSize + y);
-
-    glVertex2f(x, -tileSize + y);
-    glVertex2f(tileSize + x, -tileSize + y);
-    glVertex2f(tileSize + x, y);
-    glVertex2f(x, y);
-
-    glVertex2f(-tileSize + x, -tileSize + y);
-    glVertex2f(x, -tileSize + y);
-    glVertex2f(x, y);
-    glVertex2f(-tileSize + x, y);
-
-    glEnd();
-
-    //LINES (includes border and grid lines)
-
-    glLineWidth(0.03);
-
-    glBegin(GL_LINES);
-    glColor3f(0.0,0.0,0.0);
-
-    glVertex2f(-tileSize + x, -tileSize + y);
-    glVertex2f(tileSize + x, -tileSize + y);
-
-    glVertex2f(tileSize + x, -tileSize + y);
-    glVertex2f(tileSize + x, tileSize + y);
-
-    glVertex2f(tileSize + x, tileSize + y);
-    glVertex2f(-tileSize + x, tileSize + y);
-
-    glVertex2f(-tileSize + x, tileSize + y);
-    glVertex2f(-tileSize + x, -tileSize + y);
-
-    glVertex2f(x, tileSize + y);
-    glVertex2f(x, -tileSize + y);
-
-    glVertex2f(-tileSize + x, y);
-    glVertex2f(tileSize + x, y);
-
-    glEnd();
-
-    glFlush();
-}
 
 void drawBoard()
 {
@@ -118,7 +62,8 @@ void display() {
     /*
      * Draw tile
      */
-    create_O(0.0,0.0);
+    Piece square;
+    square.create_O(0.0,0.0);
 
 }
 
