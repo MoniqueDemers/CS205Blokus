@@ -12,6 +12,7 @@ class Player {
 private:
     string name;
     int score;
+    bool human;
     vector<Piece> color1;
     vector<Piece> color2;
 
@@ -19,7 +20,19 @@ public:
     //default constructor
     Player();
 
+    //getters
+    string getName() const;
+    int getScore() const;
+    bool getHuman() const;
 
+    //setters
+    void setName(string n);
+    void setScore(int s);
+    void setHuman(bool b);
+
+    //peek at hand
+    void seeHand(vector<Piece> color);
+    void addToScore(int s);
 
 };
 

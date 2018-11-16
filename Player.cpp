@@ -3,3 +3,42 @@
 //
 
 #include "Player.h"
+Player::Player() {
+    name = "Human";
+    score = 0;
+    human = true;
+
+    //TODO ADD HANDS
+}
+
+string Player::getName() const {
+    return name;
+}
+
+int Player::getScore() const {
+    return score;
+}
+
+bool Player::getHuman() const {
+    return human;
+}
+
+void Player::setName(string n) {
+    name = n;
+}
+
+void Player::setScore(int s) {
+    score = s;
+}
+
+void Player::setHuman(bool b) {
+    human = b;
+}
+
+//TODO Add player hand
+void Player::seeHand(vector<Piece> color) {
+}
+
+void Player::addToScore(int s) {
+    score = Player::getScore() + s;
+}
