@@ -29,7 +29,6 @@ public:
     //setters
     void setName(string n);
     void setScore(int s);
-    void setHuman(bool b);
 
     //peek at hand
     void seeHand(vector<Piece> color);

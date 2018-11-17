@@ -1,6 +1,7 @@
 #include "graphics.h"
 #include "Piece.h"
 #include "Board.h"
+#include "Player.h"
 #include <string>
 
 GLdouble width, height;
@@ -108,7 +109,29 @@ void timer(int extra) {
 
 /* Main function: GLUT runs as a console application starting at main()  */
 int main(int argc, char** argv) {
-    
+    //Player testing
+    Player human;
+    cout << "Player Test - Human" << endl;
+    cout << "Human (True/False): " << boolalpha << human.getHuman() << endl;
+    cout << "Player Name: " << human.getName() << endl;
+    cout << "Player Score: " << human.getScore() << endl;
+
+    //Computer testing
+    Computer computer;
+    cout << "\nPlayer Test - Computer" << endl;
+    cout << "Human (True/False): " << boolalpha << computer.getHuman() << endl;
+    cout << "Player Name: " << computer.getName() << endl;
+    cout << "Player Score: " << computer.getScore() << endl;
+
+    //Player Setters and addToScore Testing
+    cout << "\nPlayer Test - Setters" << endl;
+    human.setName("Monique");
+    human.setScore(100);
+    cout << "Human Name: " << human.getName() << endl;
+    cout << "Player Score: " << human.getScore() << endl;
+    human.addToScore(5);
+    cout << "Player Score: " << human.getScore() << endl;
+
     init();
     
     glutInit(&argc, argv);          // Initialize GLUT
