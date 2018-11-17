@@ -1,10 +1,13 @@
 #include "graphics.h"
 #include "Piece.h"
+#include "Player.h"
 #include <string>
 
 GLdouble width, height;
 int wd;
 float tileSize = 0.03;
+
+/*TODO implement rule declarations*/
 
 void init() {
     width = 1024;
@@ -125,7 +128,19 @@ void timer(int extra) {
 
 /* Main function: GLUT runs as a console application starting at main()  */
 int main(int argc, char** argv) {
-    
+    //Player Class Testing
+    Player player;
+    cout << "Player Test - Human" << endl;
+    cout << "Human (True/False): " << boolalpha << player.getHuman() << endl;
+    cout << "Player Name: " << player.getName() << endl;
+    cout << "Player Score: " << player.getScore() << endl;
+
+    Computer computer;
+    cout << "\nPlayer Test - Computer" << endl;
+    cout << "Human (True/False): " << boolalpha << computer.getHuman() << endl;
+    cout << "Player Name: " << computer.getName() << endl;
+    cout << "Player Score: " << computer.getScore() << endl;
+
     init();
     
     glutInit(&argc, argv);          // Initialize GLUT
@@ -163,3 +178,6 @@ int main(int argc, char** argv) {
     glutMainLoop();
     return 0;
 }
+
+
+/*TODO RULE FUNCTIONALITY*/
