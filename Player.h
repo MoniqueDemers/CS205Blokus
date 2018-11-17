@@ -4,7 +4,8 @@
 
 #ifndef GRAPHICS_STARTER_PLAYER_H
 #define GRAPHICS_STARTER_PLAYER_H
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 #include "Piece.h"
 using namespace std;
 
