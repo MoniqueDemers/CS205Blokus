@@ -1,13 +1,11 @@
 #include "graphics.h"
 #include "Piece.h"
-#include "Player.h"
+#include "Board.h"
 #include <string>
 
 GLdouble width, height;
 int wd;
 float tileSize = 0.03;
-
-/*TODO implement rule declarations*/
 
 void init() {
     width = 1024;
@@ -21,30 +19,6 @@ void initGL() {
 }
 
 
-void drawBoard()
-{
-    glClear(GL_COLOR_BUFFER_BIT);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glColor3f(2.0, 1.0, 1.0);
-    int xsize=0,ysize=250;
-    for(int j=0;j<20;j++)
-    {
-        xsize=250;
-        for(int i=0;i<20;i++)
-        {
-            glBegin(GL_POLYGON);
-            glVertex3f(-50.0+xsize, -50.0+ysize, 0.0);
-            glVertex3f(-40.0+xsize, -50.0+ysize, 0.0);
-            glVertex3f(-40.0+xsize, -40.0+ysize, 0.0);
-            glVertex3f(-50.0+xsize, -40.0+ysize, 0.0);
-            glEnd();
-            xsize+=10.0;
-        }
-        ysize+=10.0;
-    }
-    glFlush();
-}
-
 
 
 /* Handler for window-repaint event. Call back when the window first appears and
@@ -57,7 +31,7 @@ void display() {
     // system set to first quadrant, limited by screen/window size
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    //glOrtho(0.0, width, height, 0.0, -1.f, 1.f);
+    glOrtho(-50.0, 50.0, -50.0, 50.0, -1.0, 1);
 
     glClear(GL_COLOR_BUFFER_BIT);   // Clear the color buffer with current clearing color
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -65,8 +39,14 @@ void display() {
     /*
      * Draw tile
      */
+
     Piece square;
-    square.create_O(0.0,0.0);
+
+
+
+    Board board;
+    board.drawBoard();
+
 
 }
 
@@ -128,19 +108,7 @@ void timer(int extra) {
 
 /* Main function: GLUT runs as a console application starting at main()  */
 int main(int argc, char** argv) {
-    //Player Class Testing
-    Player player;
-    cout << "Player Test - Human" << endl;
-    cout << "Human (True/False): " << boolalpha << player.getHuman() << endl;
-    cout << "Player Name: " << player.getName() << endl;
-    cout << "Player Score: " << player.getScore() << endl;
-
-    Computer computer;
-    cout << "\nPlayer Test - Computer" << endl;
-    cout << "Human (True/False): " << boolalpha << computer.getHuman() << endl;
-    cout << "Player Name: " << computer.getName() << endl;
-    cout << "Player Score: " << computer.getScore() << endl;
-
+    
     init();
     
     glutInit(&argc, argv);          // Initialize GLUT
@@ -178,6 +146,3 @@ int main(int argc, char** argv) {
     glutMainLoop();
     return 0;
 }
-
-
-/*TODO RULE FUNCTIONALITY*/
