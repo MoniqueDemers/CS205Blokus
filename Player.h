@@ -9,7 +9,7 @@
 using namespace std;
 
 class Player {
-private:
+protected:
     string name;
     int score;
     bool human;
@@ -36,5 +36,11 @@ public:
 
 };
 
+class Computer : public Player{
+public:
+    Computer();
+
+    //TODO add AI functionality
+};
 
 #endif //GRAPHICS_STARTER_PLAYER_H

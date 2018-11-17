@@ -42,3 +42,10 @@ void Player::seeHand(vector<Piece> color) {
 void Player::addToScore(int s) {
     score = Player::getScore() + s;
 }
+
+Computer::Computer() : Player() {
+    name = "Computer";
+    score = 0;
+    human = false;
+
+}
