@@ -40,13 +40,11 @@ void display() {
      * Draw tile
      */
 
-    Piece square;
-
-
-
     Board board;
     board.drawBoard();
 
+    Piece piece(1,0,0);
+    piece.create_l5(0,0);
 
 }
 
