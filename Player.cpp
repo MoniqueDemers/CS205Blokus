@@ -31,10 +31,6 @@ void Player::setScore(int s) {
     score = s;
 }
 
-void Player::setHuman(bool b) {
-    human = b;
-}
-
 //TODO Add player hand
 void Player::seeHand(vector<Piece> color) {
 }

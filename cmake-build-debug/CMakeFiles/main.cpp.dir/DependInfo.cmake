@@ -4,16 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/will/Documents/Programming/CS205Blokus/Board.cpp" "/Users/will/Documents/Programming/CS205Blokus/cmake-build-debug/CMakeFiles/main.cpp.dir/Board.cpp.o"
-  "/Users/will/Documents/Programming/CS205Blokus/Piece.cpp" "/Users/will/Documents/Programming/CS205Blokus/cmake-build-debug/CMakeFiles/main.cpp.dir/Piece.cpp.o"
-  "/Users/will/Documents/Programming/CS205Blokus/Player.cpp" "/Users/will/Documents/Programming/CS205Blokus/cmake-build-debug/CMakeFiles/main.cpp.dir/Player.cpp.o"
-  "/Users/will/Documents/Programming/CS205Blokus/graphics_blockus_starter.cpp" "/Users/will/Documents/Programming/CS205Blokus/cmake-build-debug/CMakeFiles/main.cpp.dir/graphics_blockus_starter.cpp.o"
+  "/Users/LiamO/Documents/COLLEGE/CS205Blokus/Board.cpp" "/Users/LiamO/Documents/COLLEGE/CS205Blokus/cmake-build-debug/CMakeFiles/main.cpp.dir/Board.cpp.o"
+  "/Users/LiamO/Documents/COLLEGE/CS205Blokus/Piece.cpp" "/Users/LiamO/Documents/COLLEGE/CS205Blokus/cmake-build-debug/CMakeFiles/main.cpp.dir/Piece.cpp.o"
+  "/Users/LiamO/Documents/COLLEGE/CS205Blokus/Player.cpp" "/Users/LiamO/Documents/COLLEGE/CS205Blokus/cmake-build-debug/CMakeFiles/main.cpp.dir/Player.cpp.o"
+  "/Users/LiamO/Documents/COLLEGE/CS205Blokus/graphics_blockus_starter.cpp" "/Users/LiamO/Documents/COLLEGE/CS205Blokus/cmake-build-debug/CMakeFiles/main.cpp.dir/graphics_blockus_starter.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/System/Library/Frameworks/OpenGL.framework"
+  "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"
+  "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework"
   )
 
 # Targets to which this target links.
